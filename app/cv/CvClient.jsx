@@ -174,7 +174,7 @@ async function loadCircularPortrait() {
       resolve(canvas.toDataURL("image/jpeg", 0.85));
     };
     img.onerror = () => resolve(null);
-    img.src = "/images/gallery/myself/graduation.jpg";
+    img.src = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/images/gallery/myself/graduation.jpg`;
   });
 }
 

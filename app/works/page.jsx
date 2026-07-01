@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Banner, Spotlight, Section } from "../components";
+import { imgPath } from "../utils/imgPath";
 
 export const metadata = {
   title: "My Works - Cis van Aken",
@@ -67,7 +68,9 @@ export default function WorksPage() {
         <ul className="actions stacked">
           <li>
             <a
-              href="/files/Novel_Human_Interface_Device__Magic_Wand-1.pdf"
+              href={imgPath(
+                "/files/Novel_Human_Interface_Device__Magic_Wand-1.pdf",
+              )}
               className="button"
             >
               Read all about it

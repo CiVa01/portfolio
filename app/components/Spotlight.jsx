@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { imgPath } from "../utils/imgPath";
 
 export default function Spotlight({
   children,
@@ -24,7 +25,7 @@ export default function Spotlight({
       <div className="content cvb-card">{children}</div>
       {showImage && imageSrc && (
         <div className="image">
-          <img src={imageSrc} alt={imageAlt} />
+          <img src={imgPath(imageSrc)} alt={imageAlt} />
         </div>
       )}
     </section>

@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const BASE_PATH = "/portfolio";
+
 const nextConfig = {
   // Enable static export for GitHub Pages deployment
   output: "export",
@@ -9,11 +11,16 @@ const nextConfig = {
   },
 
   // Base path for GitHub Pages (repo is deployed at /portfolio)
-  basePath: "/portfolio",
+  basePath: BASE_PATH,
+
+  // Expose basePath to client-side code for raw <img> / <a href> usage
+  env: {
+    NEXT_PUBLIC_BASE_PATH: BASE_PATH,
+  },
 
   // Disable API routes since this is static
-  // Allow static generation with trailing slashes
-  trailingSlash: false,
+  // GitHub Pages serves directories (about/index.html) more reliably than flat files (about.html)
+  trailingSlash: true,
 };
 
 module.exports = nextConfig;

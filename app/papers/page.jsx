@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Banner, Spotlight, Section } from "../components";
+import { imgPath } from "../utils/imgPath";
 
 export const metadata = {
   title: "Papers - Cis van Aken",
@@ -57,7 +58,10 @@ export default function PapersPage() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/files/BSc_Thesis_Cis_van_Aken.pdf" className="button">
+            <a
+              href={imgPath("/files/BSc_Thesis_Cis_van_Aken.pdf")}
+              className="button"
+            >
               Read the full thesis
             </a>
           </li>
@@ -86,7 +90,10 @@ export default function PapersPage() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/files/Assignment_2_paper-5.pdf" className="button">
+            <a
+              href={imgPath("/files/Assignment_2_paper-5.pdf")}
+              className="button"
+            >
               Read the full paper
             </a>
           </li>
@@ -116,7 +123,7 @@ export default function PapersPage() {
         <ul className="actions stacked">
           <li>
             <a
-              href="/files/Responsible_ICT_Research_Project-1.pdf"
+              href={imgPath("/files/Responsible_ICT_Research_Project-1.pdf")}
               className="button"
             >
               Read the full paper

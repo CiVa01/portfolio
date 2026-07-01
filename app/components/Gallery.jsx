@@ -2,6 +2,7 @@
 "use client";
 
 import { useState } from "react";
+import { imgPath } from "../utils/imgPath";
 
 export default function Gallery({ items = [] }) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -39,7 +40,7 @@ export default function Gallery({ items = [] }) {
                 }}
               >
                 <img
-                  src={item.thumbnail || item.fullImage}
+                  src={imgPath(item.thumbnail || item.fullImage)}
                   alt={item.title || `Gallery item ${index + 1}`}
                 />
               </a>
@@ -67,7 +68,7 @@ export default function Gallery({ items = [] }) {
               ←
             </button>
             <img
-              src={items[currentImageIndex].fullImage}
+              src={imgPath(items[currentImageIndex].fullImage)}
               alt={items[currentImageIndex].title}
             />
             <button className="modal-nav modal-next" onClick={goToNext}>
