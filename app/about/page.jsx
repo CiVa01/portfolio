@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from "next/link";
 import { Banner, Spotlight, Section } from "../components";
 
 export const metadata = {
@@ -175,9 +176,9 @@ export default function AboutPage() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/" className="button">
+            <Link href="/" className="button">
               Back to Home
-            </a>
+            </Link>
           </li>
         </ul>
       </Spotlight>

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import Link from "next/link";
 
 import {
   Banner,
@@ -151,9 +152,9 @@ export default function Home() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/cv" className="button">
+            <Link href="/cv" className="button">
               See My CV
-            </a>
+            </Link>
           </li>
         </ul>
       </Banner>
@@ -186,9 +187,9 @@ export default function Home() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/about" className="button big wide">
+            <Link href="/about" className="button big wide">
               Read More About Me
-            </a>
+            </Link>
           </li>
         </ul>
       </Spotlight>
@@ -211,9 +212,9 @@ export default function Home() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/works" className="button">
+            <Link href="/works" className="button">
               Read More
-            </a>
+            </Link>
           </li>
         </ul>
       </Spotlight>
@@ -242,9 +243,9 @@ export default function Home() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/papers" className="button">
+            <Link href="/papers" className="button">
               Learn More
-            </a>
+            </Link>
           </li>
         </ul>
       </Spotlight>

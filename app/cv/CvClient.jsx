@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import { cvBirthDate, cvData } from "./cvData";
 
@@ -442,9 +443,9 @@ export default function CvClient() {
         <div className="top-bar-inner">
           <div className="brand-row">
             <span className="brand-name">Cis van Aken</span>
-            <a className="chip small ghost" id="back-home" href="/">
+            <Link className="chip small ghost" id="back-home" href="/">
               To Portfolio
-            </a>
+            </Link>
           </div>
 
           <div className="toolbar" aria-label="CV actions">

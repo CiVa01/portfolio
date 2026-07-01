@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import Link from "next/link";
 import { Banner, Spotlight, Section } from "../components";
 import { imgPath } from "../utils/imgPath";
 
@@ -144,9 +145,9 @@ export default function WorksPage() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/" className="button">
+            <Link href="/" className="button">
               Back to Home
-            </a>
+            </Link>
           </li>
         </ul>
       </Spotlight>
