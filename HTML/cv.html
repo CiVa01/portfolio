@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cis van Aken | CV</title>
+    <link rel="stylesheet" href="../assets/css/cv.css" />
+  </head>
+  <body data-language="en">
+    <nav class="top-bar">
+      <div class="top-bar-inner">
+        <span class="brand-name">Cis van Aken</span>
+        <div class="toolbar" aria-label="CV actions">
+          <button class="chip" id="back-home" type="button">
+            Back to main
+          </button>
+          <button class="chip active" type="button" data-language-toggle="en">
+            English
+          </button>
+          <button class="chip" type="button" data-language-toggle="nl">
+            Nederlands
+          </button>
+          <button class="chip accent" id="export-pdf" type="button">
+            Export PDF
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="app-shell">
+      <header class="hero-card main-header">
+        <div class="hero-photo">
+          <div class="photo-ring" aria-label="Portrait placeholder">
+            <span id="photo-label">FOTO</span>
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1 id="name-title"></h1>
+          <p id="tagline" class="tagline"></p>
+          <div class="hero-details" id="sidebar-contact"></div>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <div class="main-column">
+          <section class="card main-section" id="profile-section"></section>
+          <section class="card main-section" id="work-section"></section>
+          <section class="card main-section" id="projects-section"></section>
+          <section class="card main-section" id="papers-section"></section>
+        </div>
+
+        <aside class="card sidebar-card">
+          <section class="side-block" id="sidebar-education"></section>
+          <section class="side-block" id="sidebar-skills"></section>
+          <section class="side-block" id="sidebar-languages"></section>
+          <section class="side-block" id="sidebar-other"></section>
+          <section class="side-block" id="sidebar-board"></section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script>
+      const cvData = {
+        en: {
+          ui: {
+            photoLabel: "PHOTO",
+            backLabel: "Back to main",
+            exportLabel: "Export PDF",
+            sectionTitles: {
+              contact: "CONTACT",
+              education: "EDUCATION",
+              skills: "SKILLS",
+              languages: "LANGUAGES",
+              other: "OTHER EXPERIENCE",
+              board: "BOARD EXPERIENCE",
+              profile: "PROFILE",
+              work: "WORK EXPERIENCE",
+              projects: "PROJECTS",
+              papers: "ACADEMIC PAPERS",
+            },
+          },
+          header: {
+            name: "CIS VAN AKEN",
+            tagline:
+              "UX Designer & Researcher · BSc Artificial Intelligence · MSc Human Computer Interaction",
+          },
+          sidebar: {
+            contact: [
+              { label: "Portfolio", value: "civa01.github.io/portfolio" },
+              { label: "Phone", value: "+31 6 49624470" },
+              { label: "Email", value: "cis.vanaken@outlook.com" },
+              { label: "Work", value: "cis.vanaken@digitalbricks.ai" },
+              { label: "Location", value: "Nijmegen, Nederland" },
+              { label: "LinkedIn", value: "linkedin.com/in/cis-van-aken/" },
+            ],
+            education: [
+              {
+                period: "2024 - Present",
+                institution: "Utrecht University",
+                detail: "MSc Human Computer Interaction",
+              },
+              {
+                period: "2019 - 2024",
+                institution: "Radboud University, Nijmegen",
+                detail: "BSc Artificial Intelligence",
+                extra: "Thesis: Neuromorphic Computing",
+              },
+            ],
+            skills: [
+              "UX Design Principles",
+              "User Research & Usability Testing",
+              "Prototyping (Figma, Maze)",
+              "Human Centered Design",
+              "Collaborative Development",
+              "Programming (Python, Java)",
+              "Data Engineering (SQL, Hadoop, Spark)",
+              "Machine Learning / AI",
+              "Data Visualisation (D3.js)",
+            ],
+            languages: ["English - Fluent", "Dutch - Fluent"],
+            other: [
+              {
+                title: "Mentor Trainer",
+                body: "Trained first-year mentors in accountability and incident handling (intro week, Radboud).",
+              },
+              {
+                title: "Student Assistant (2020-2022)",
+                body: "Mentor for first-years: point of contact and guidance through the first group project.",
+              },
+            ],
+            board: [
+              {
+                title: "Chair - FNWI Olympus",
+                period: "2023 - 2024",
+              },
+              {
+                title: "Secretary - CognAC",
+                period: "2021 - 2022",
+                body: "Membership admin (600+), chairing meetings, internal communications.",
+              },
+            ],
+          },
+          content: {
+            profile:
+              "UX designer and researcher with a strong technical foundation in AI. Combines human-centred design with strategic thinking to make digital products smarter, more user-friendly and future-proof. Works closely with AI specialists to translate opportunities into concrete solutions.",
+            work: [
+              {
+                title: "Digitalbricks",
+                role: "UX Designer",
+                period: "Current position",
+                body: "Conducted UX research and usability testing to support product development. Collaborates with AI specialists to translate user insights into product decisions. Large UX project currently in progress.",
+                highlight: true,
+              },
+              {
+                title: "HSO",
+                role: "Student Employee",
+                body: "Servicedesk IT support for end users in a Managed Services environment.",
+              },
+              {
+                title: "Bregje Nijmegen",
+                role: "Host, Bartender & Floor Manager",
+                period: "2022 - 2024",
+                bullets: [
+                  "Floor Manager (Nov. 2023): evening coordination and team expectation management.",
+                  "New venue opening (Jul. 2022): staff training, onboarding and resolving operational challenges.",
+                ],
+              },
+            ],
+            projects: [
+              {
+                title: "LawyAir - Browser Privacy Extension",
+                meta: "UX Research & Prototyping · Real client",
+                body: "Full user research process for a real client: interviews, personas and user stories. Proposed iterative improvements based on usability feedback. Designed a browser extension summarising cookie consent forms via an interactive 'lawyer' avatar.",
+              },
+              {
+                title: "Magic Wand - Gesture-based Remote",
+                meta: "Physical Prototyping & User Research · MSc HCI",
+                body: "Designed and built a working gesture-controlled remote. Stepped in as user researcher: interviews and field studies. Final product controls devices via gestures (on/off, settings cycling).",
+              },
+              {
+                title: "Within-Country Migration Visualisation",
+                meta: "Data Visualisation · D3.js · CBS data",
+                body: "Interactive migration dashboard in D3.js using CBS data. Technical lead of the group; contributed to research and ideation.",
+              },
+            ],
+            papers: [
+              {
+                title: "BSc Thesis: Neuromorphic Computing & Scalability",
+                meta: "BSc Thesis · Radboud University · Grade: 8",
+                body: "Energy-efficient scalability of neuromorphic algorithms vs. traditional AI methods. A novel, complex topic not previously assigned to bachelor students.",
+              },
+              {
+                title: "ML Model for Classification of MEG Data",
+                meta: "Machine Learning · PyTorch · LSTM + CNN",
+                body: "Designed and implemented a hybrid LSTM-CNN architecture in PyTorch for spatiotemporal classification of brain signals (MEG data).",
+              },
+              {
+                title: "Mental Health & Social Media - Ethical Analysis",
+                meta: "Ethics · Responsible ICT",
+                body: "Analysed corporate responsibility for the mental health impact of social media. Contributed to the ethical framework and argumentation.",
+              },
+            ],
+          },
+        },
+        nl: {
+          ui: {
+            photoLabel: "FOTO",
+            backLabel: "Terug naar hoofdpagina",
+            exportLabel: "Exporteer PDF",
+            sectionTitles: {
+              contact: "CONTACT",
+              education: "OPLEIDING",
+              skills: "VAARDIGHEDEN",
+              languages: "TALEN",
+              other: "OVERIGE ERVARING",
+              board: "BESTUURSERVARING",
+              profile: "PROFIEL",
+              work: "WERKERVARING",
+              projects: "PROJECTEN",
+              papers: "ACADEMISCHE PAPERS",
+            },
+          },
+          header: {
+            name: "CIS VAN AKEN",
+            tagline:
+              "UX Designer & Researcher · BSc Artificial Intelligence · MSc Human Computer Interaction",
+          },
+          sidebar: {
+            contact: [
+              { label: "Portfolio", value: "civa01.github.io/portfolio" },
+              { label: "Telefoon", value: "+31 6 49624470" },
+              { label: "Email", value: "cis.vanaken@outlook.com" },
+              { label: "Werk", value: "cis.vanaken@digitalbricks.ai" },
+              { label: "Locatie", value: "Nijmegen, Nederland" },
+              { label: "LinkedIn", value: "linkedin.com/in/cis-van-aken/" },
+            ],
+            education: [
+              {
+                period: "2024 - Heden",
+                institution: "Utrecht University",
+                detail: "MSc Human Computer Interaction",
+              },
+              {
+                period: "2019 - 2024",
+                institution: "Radboud University, Nijmegen",
+                detail: "BSc Artificial Intelligence",
+                extra: "Scriptie: Neuromorphic Computing",
+              },
+            ],
+            skills: [
+              "UX Design Principles",
+              "User Research & Usabilitytesten",
+              "Prototyping (Figma, Maze)",
+              "Human Centered Design",
+              "Samenwerking & Ontwikkeling",
+              "Programmeren (Python, Java)",
+              "Data Engineering (SQL, Hadoop, Spark)",
+              "Machine Learning / AI",
+              "Datavisualisatie (D3.js)",
+            ],
+            languages: ["Engels - Vloeiend", "Nederlands - Vloeiend"],
+            other: [
+              {
+                title: "Mentortrainer",
+                body: "Eerstejaarsmentoren getraind in verantwoordelijkheid en calamiteitenhandeling (introductieweek, Radboud).",
+              },
+              {
+                title: "Student-assistent (2020-2022)",
+                body: "Mentor voor eerstejaars: vertrouwenspersoon en begeleiding bij het eerste groepsproject.",
+              },
+            ],
+            board: [
+              {
+                title: "Voorzitter - FNWI Olympus",
+                period: "2023 - 2024",
+              },
+              {
+                title: "Secretaris - CognAC",
+                period: "2021 - 2022",
+                body: "Ledenadministratie (600+), vergadering leiden, interne communicatie.",
+              },
+            ],
+          },
+          content: {
+            profile:
+              "UX-designer en onderzoeker met een sterke technische basis in AI. Combineert mensgericht ontwerp met strategisch meedenken om digitale producten slimmer, gebruiksvriendelijker en toekomstbestendig te maken. Werkt nauw samen met AI-specialisten om kansen te vertalen naar concrete oplossingen.",
+            work: [
+              {
+                title: "Digitalbricks",
+                role: "UX Designer",
+                period: "Huidige functie",
+                body: "UX-onderzoek en gebruikerstesten uitgevoerd ter ondersteuning van productontwikkeling. Werkt samen met AI-specialisten aan het vertalen van gebruikersinzichten naar productbeslissingen. Groot UX-project momenteel in uitvoering.",
+                highlight: true,
+              },
+              {
+                title: "HSO",
+                role: "Werkstudent",
+                body: "Servicedesk IT-support voor eindgebruikers (Managed Services omgeving).",
+              },
+              {
+                title: "Bregje Nijmegen",
+                role: "Gastheer, Barman & Floormanager",
+                period: "2022 - 2024",
+                bullets: [
+                  "Floormanager (nov. 2023): avondcoordinatie en verwachtingsbeheer.",
+                  "Opening nieuwe locatie (jul. 2022): training, onboarding en operationele uitdagingen.",
+                ],
+              },
+            ],
+            projects: [
+              {
+                title: "LawyAir - Browser Privacy Extension",
+                meta: "UX Research & Prototyping · Echte opdrachtgever",
+                body: "Volledig user research traject voor een echte klant: interviews, persona's en user stories. Verbeteringen voorgesteld op basis van gebruikersfeedback. Browser-extensie die cookieformulieren samenvat via een interactieve 'lawyer' avatar.",
+              },
+              {
+                title: "Magic Wand - Gesture-based Remote",
+                meta: "Physical Prototyping & User Research · Master HCI",
+                body: "Gesture-gestuurd prototype ontworpen en gebouwd. Ingesprongen als user researcher: interviews en field studies. Eindproduct bestuurt apparaten via gebaren (aan/uit, instellingen).",
+              },
+              {
+                title: "Within-Country Migratievisualisatie",
+                meta: "Datavisualisatie · D3.js · CBS-data",
+                body: "Interactief migratiedashboard in D3.js op CBS-data. Technisch lead van de groep; bijgedragen aan de research- en ideefase.",
+              },
+            ],
+            papers: [
+              {
+                title:
+                  "Bachelorscriptie: Neuromorphic Computing & Schaalbaarheid",
+                meta: "BSc Thesis · Radboud University · Eindcijfer: 8",
+                body: "Energie-efficiente schaalbaarheid van neuromorphic algoritmen vs. traditionele AI. Complex en nieuw onderwerp, nog niet eerder toegewezen aan bachelorstudenten.",
+              },
+              {
+                title: "ML-model voor classificatie van MEG-data",
+                meta: "Machine Learning · PyTorch · LSTM + CNN",
+                body: "Hybride LSTM-CNN-architectuur ontworpen en geimplementeerd in PyTorch voor ruimtelijk-temporele classificatie van hersensignalen.",
+              },
+              {
+                title: "Mentale gezondheid & sociale media - Ethische analyse",
+                meta: "Ethiek · Responsible ICT",
+                body: "Verantwoordelijkheid van techbedrijven voor de mentale gezondheidsimpact van sociale media. Bijgedragen aan ethisch framework en argumentatie.",
+              },
+            ],
+          },
+        },
+      };
+
+      const body = document.body;
+      const buttons = document.querySelectorAll("[data-language-toggle]");
+      const backHomeBtn = document.getElementById("back-home");
+      const exportBtn = document.getElementById("export-pdf");
+      const initialParams = new URLSearchParams(window.location.search);
+      const initialLang = initialParams.get("lang") === "nl" ? "nl" : "en";
+      const birthDate = { day: 18, month: 3, year: 2001 };
+
+      function escapeHtml(value) {
+        return value
+          .replaceAll("&", "&amp;")
+          .replaceAll("<", "&lt;")
+          .replaceAll(">", "&gt;")
+          .replaceAll('"', "&quot;")
+          .replaceAll("'", "&#39;");
+      }
+
+      function calculateAgeFromBirthDate({ day, month, year }) {
+        const now = new Date();
+        let age = now.getFullYear() - year;
+        const hasBirthdayPassedThisYear =
+          now.getMonth() + 1 > month ||
+          (now.getMonth() + 1 === month && now.getDate() >= day);
+
+        if (!hasBirthdayPassedThisYear) {
+          age -= 1;
+        }
+
+        return age;
+      }
+
+      function buildDisplayName(data) {
+        const age = calculateAgeFromBirthDate(birthDate);
+        return `${data.header.name}, ${age}`;
+      }
+
+      function renderSideList(title, items, withDots) {
+        const rows = items
+          .map((item) => {
+            if (typeof item === "string") {
+              return `<li${withDots ? ' class="dot"' : ""}>${escapeHtml(item)}</li>`;
+            }
+
+            return `<li>
+              ${item.period ? `<p class="period">${escapeHtml(item.period)}</p>` : ""}
+              ${item.institution ? `<p class="strong">${escapeHtml(item.institution)}</p>` : ""}
+              ${item.detail ? `<p>${escapeHtml(item.detail)}</p>` : ""}
+              ${item.extra ? `<p>${escapeHtml(item.extra)}</p>` : ""}
+              ${item.title ? `<p class="strong">${escapeHtml(item.title)}</p>` : ""}
+              ${item.body ? `<p>${escapeHtml(item.body)}</p>` : ""}
+            </li>`;
+          })
+          .join("");
+
+        return `<h2 class="side-title">${escapeHtml(title)}</h2><ul class="side-list">${rows}</ul>`;
+      }
+
+      function renderMainItems(items) {
+        return items
+          .map((item) => {
+            const bullets = item.bullets
+              ? `<ul class="entry-bullets">${item.bullets
+                  .map((bullet) => `<li>${escapeHtml(bullet)}</li>`)
+                  .join("")}</ul>`
+              : "";
+
+            return `<article class="entry${item.highlight ? " highlighted" : ""}">
+              <div class="entry-header">
+                <h3>${escapeHtml(item.title)}</h3>
+                ${item.period ? `<span class="badge">${escapeHtml(item.period)}</span>` : ""}
+              </div>
+              ${item.role ? `<p class="entry-meta">${escapeHtml(item.role)}</p>` : ""}
+              ${item.meta ? `<p class="entry-meta">${escapeHtml(item.meta)}</p>` : ""}
+              ${item.body ? `<p class="entry-body">${escapeHtml(item.body)}</p>` : ""}
+              ${bullets}
+            </article>`;
+          })
+          .join("");
+      }
+
+      function animateRenderedBlocks() {
+        const motionReduced = window.matchMedia(
+          "(prefers-reduced-motion: reduce)",
+        ).matches;
+        const blocks = document.querySelectorAll(
+          ".hero-card, .card, .side-block",
+        );
+
+        blocks.forEach((block) => {
+          block.classList.remove("is-visible");
+          block.classList.add("animate-in");
+        });
+
+        if (motionReduced) {
+          blocks.forEach((block) => {
+            block.classList.add("is-visible");
+          });
+          return;
+        }
+
+        blocks.forEach((block, index) => {
+          block.style.animationDelay = `${Math.min(index * 55, 350)}ms`;
+          requestAnimationFrame(() => {
+            block.classList.add("is-visible");
+          });
+        });
+      }
+
+      function renderLanguage(lang) {
+        const data = cvData[lang];
+        body.setAttribute("data-language", lang);
+        document.documentElement.setAttribute("lang", lang);
+
+        document.getElementById("photo-label").textContent = data.ui.photoLabel;
+        backHomeBtn.textContent = data.ui.backLabel;
+        exportBtn.textContent = data.ui.exportLabel;
+        document.getElementById("name-title").textContent =
+          buildDisplayName(data);
+        document.getElementById("tagline").textContent = data.header.tagline;
+
+        document.getElementById("sidebar-contact").innerHTML = renderSideList(
+          data.ui.sectionTitles.contact,
+          data.sidebar.contact.map((entry) => `${entry.value}`),
+          false,
+        );
+        document.getElementById("sidebar-education").innerHTML = renderSideList(
+          data.ui.sectionTitles.education,
+          data.sidebar.education,
+          false,
+        );
+        document.getElementById("sidebar-skills").innerHTML = renderSideList(
+          data.ui.sectionTitles.skills,
+          data.sidebar.skills,
+          true,
+        );
+        document.getElementById("sidebar-languages").innerHTML = renderSideList(
+          data.ui.sectionTitles.languages,
+          data.sidebar.languages,
+          true,
+        );
+        document.getElementById("sidebar-other").innerHTML = renderSideList(
+          data.ui.sectionTitles.other,
+          data.sidebar.other,
+          false,
+        );
+        document.getElementById("sidebar-board").innerHTML = renderSideList(
+          data.ui.sectionTitles.board,
+          data.sidebar.board,
+          false,
+        );
+
+        document.getElementById("profile-section").innerHTML = `
+          <h2 class="main-title">${escapeHtml(data.ui.sectionTitles.profile)}</h2>
+          <p class="profile-text">${escapeHtml(data.content.profile)}</p>
+        `;
+
+        document.getElementById("work-section").innerHTML = `
+          <h2 class="main-title">${escapeHtml(data.ui.sectionTitles.work)}</h2>
+          <div class="entries">${renderMainItems(data.content.work)}</div>
+        `;
+
+        document.getElementById("projects-section").innerHTML = `
+          <h2 class="main-title">${escapeHtml(data.ui.sectionTitles.projects)}</h2>
+          <div class="entries">${renderMainItems(data.content.projects)}</div>
+        `;
+
+        document.getElementById("papers-section").innerHTML = `
+          <h2 class="main-title">${escapeHtml(data.ui.sectionTitles.papers)}</h2>
+          <div class="entries">${renderMainItems(data.content.papers)}</div>
+        `;
+
+        buttons.forEach((button) => {
+          const isActive = button.getAttribute("data-language-toggle") === lang;
+          button.classList.toggle("active", isActive);
+          button.setAttribute("aria-pressed", String(isActive));
+        });
+
+        const url = new URL(window.location.href);
+        url.searchParams.set("lang", lang);
+        window.history.replaceState({}, "", url);
+
+        animateRenderedBlocks();
+      }
+
+      function wrapText(doc, text, width) {
+        return doc.splitTextToSize(text, width);
+      }
+
+      function downloadPdf(lang) {
+        if (!window.jspdf || !window.jspdf.jsPDF) {
+          window.print();
+          return;
+        }
+
+        const { jsPDF } = window.jspdf;
+        const data = cvData[lang];
+        const doc = new jsPDF({ unit: "pt", format: "a4" });
+
+        const pageWidth = doc.internal.pageSize.getWidth();
+        const pageHeight = doc.internal.pageSize.getHeight();
+        const leftWidth = 175;
+        const rightStartX = leftWidth + 34;
+        const rightWidth = pageWidth - rightStartX - 34;
+
+        function drawFrame() {
+          doc.setFillColor(30, 52, 84);
+          doc.rect(0, 0, leftWidth, pageHeight, "F");
+
+          doc.setDrawColor(57, 168, 209);
+          doc.setLineWidth(1.5);
+          doc.circle(87, 88, 42, "S");
+
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(9);
+          doc.setTextColor(95, 207, 247);
+          doc.text(data.ui.photoLabel, 87, 92, { align: "center" });
+        }
+
+        function writeLeftSection(y, title, lines) {
+          doc.setFont("helvetica", "bold");
+          doc.setFontSize(9);
+          doc.setTextColor(95, 207, 247);
+          doc.text(title, 16, y);
+
+          doc.setDrawColor(57, 168, 209);
+          doc.setLineWidth(0.6);
+          doc.line(16, y + 6, leftWidth - 16, y + 6);
+
+          let currentY = y + 20;
+          doc.setFont("helvetica", "normal");
+          doc.setFontSize(7.8);
+          doc.setTextColor(230, 241, 250);
+
+          lines.forEach((line) => {
+            const wrapped = wrapText(doc, line, leftWidth - 32);
+            wrapped.forEach((part) => {
+              doc.text(part, 16, currentY);
+              currentY += 10;
+            });
+            currentY += 2;
+          });
+
+          return currentY + 8;
+        }
+
+        function writeSectionTitle(y, title) {
+          doc.setFont("helvetica", "bold");
+          doc.setFontSize(11);
+          doc.setTextColor(33, 57, 86);
+          doc.text(title, rightStartX, y);
+          doc.setDrawColor(203, 213, 224);
+          doc.setLineWidth(0.6);
+          doc.line(rightStartX, y + 6, rightStartX + rightWidth, y + 6);
+          return y + 22;
+        }
+
+        let pageIndex = 0;
+
+        function nextPage() {
+          if (pageIndex > 0) {
+            doc.addPage();
+          }
+          drawFrame();
+          pageIndex += 1;
+        }
+
+        nextPage();
+
+        let leftY = 152;
+        leftY = writeLeftSection(
+          leftY,
+          data.ui.sectionTitles.contact,
+          data.sidebar.contact.map((entry) => entry.value),
+        );
+        leftY = writeLeftSection(
+          leftY,
+          data.ui.sectionTitles.education,
+          data.sidebar.education.flatMap((entry) => [
+            entry.period,
+            entry.institution,
+            entry.detail,
+            entry.extra || "",
+          ]),
+        );
+        leftY = writeLeftSection(
+          leftY,
+          data.ui.sectionTitles.skills,
+          data.sidebar.skills,
+        );
+        leftY = writeLeftSection(
+          leftY,
+          data.ui.sectionTitles.languages,
+          data.sidebar.languages,
+        );
+
+        let y = 56;
+        doc.setFont("helvetica", "bold");
+        doc.setFontSize(26);
+        doc.setTextColor(33, 57, 86);
+        doc.text(buildDisplayName(data), rightStartX, y);
+
+        y += 18;
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(9.5);
+        doc.setTextColor(86, 102, 120);
+        doc.text(data.header.tagline, rightStartX, y);
+
+        y += 22;
+        y = writeSectionTitle(y, data.ui.sectionTitles.profile);
+        doc.setFont("helvetica", "normal");
+        doc.setFontSize(10.5);
+        doc.setTextColor(41, 55, 72);
+        wrapText(doc, data.content.profile, rightWidth).forEach((line) => {
+          doc.text(line, rightStartX, y);
+          y += 14;
+        });
+        y += 8;
+
+        function ensureSpace(required) {
+          if (y + required > pageHeight - 32) {
+            nextPage();
+            y = 56;
+          }
+        }
+
+        function writeEntriesSection(title, entries) {
+          ensureSpace(40);
+          y = writeSectionTitle(y, title);
+
+          entries.forEach((entry) => {
+            const bodyLines = entry.body
+              ? wrapText(doc, entry.body, rightWidth - 26)
+              : [];
+            const bulletLines = (entry.bullets || []).flatMap((bullet) =>
+              wrapText(doc, "- " + bullet, rightWidth - 36),
+            );
+            const estimated =
+              58 +
+              bodyLines.length * 13 +
+              bulletLines.length * 13 +
+              (entry.meta || entry.role ? 14 : 0);
+            ensureSpace(estimated);
+
+            doc.setFillColor(
+              entry.highlight ? 236 : 246,
+              entry.highlight ? 247 : 248,
+              entry.highlight ? 252 : 250,
+            );
+            doc.setDrawColor(215, 226, 236);
+            doc.roundedRect(
+              rightStartX,
+              y - 14,
+              rightWidth,
+              estimated - 12,
+              6,
+              6,
+              "FD",
+            );
+
+            doc.setFont("helvetica", "bold");
+            doc.setFontSize(13);
+            doc.setTextColor(32, 52, 80);
+            doc.text(entry.title, rightStartX + 12, y + 4);
+
+            if (entry.period) {
+              doc.setFillColor(48, 143, 176);
+              doc.roundedRect(
+                rightStartX + rightWidth - 128,
+                y - 6,
+                116,
+                18,
+                3,
+                3,
+                "F",
+              );
+              doc.setFont("helvetica", "bold");
+              doc.setFontSize(8.5);
+              doc.setTextColor(255, 255, 255);
+              doc.text(entry.period, rightStartX + rightWidth - 70, y + 6, {
+                align: "center",
+              });
+            }
+
+            let lineY = y + 20;
+            if (entry.role || entry.meta) {
+              doc.setFont("helvetica", "italic");
+              doc.setFontSize(10);
+              doc.setTextColor(72, 109, 136);
+              doc.text(entry.role || entry.meta, rightStartX + 12, lineY);
+              lineY += 14;
+            }
+
+            doc.setFont("helvetica", "normal");
+            doc.setFontSize(10.3);
+            doc.setTextColor(44, 56, 73);
+            bodyLines.forEach((line) => {
+              doc.text(line, rightStartX + 12, lineY);
+              lineY += 13;
+            });
+
+            if (bulletLines.length > 0) {
+              lineY += 2;
+              bulletLines.forEach((line) => {
+                doc.text(line, rightStartX + 14, lineY);
+                lineY += 13;
+              });
+            }
+
+            y += estimated;
+          });
+        }
+
+        writeEntriesSection(data.ui.sectionTitles.work, data.content.work);
+        writeEntriesSection(
+          data.ui.sectionTitles.projects,
+          data.content.projects,
+        );
+        writeEntriesSection(data.ui.sectionTitles.papers, data.content.papers);
+
+        const fileSuffix = lang === "nl" ? "nl" : "en";
+        doc.save(`cis-van-aken-cv-${fileSuffix}.pdf`);
+      }
+
+      buttons.forEach((button) => {
+        button.addEventListener("click", () => {
+          renderLanguage(button.getAttribute("data-language-toggle"));
+        });
+      });
+
+      exportBtn.addEventListener("click", () => {
+        const currentLanguage = body.getAttribute("data-language") || "en";
+        downloadPdf(currentLanguage);
+      });
+
+      backHomeBtn.addEventListener("click", () => {
+        window.location.href = "../index.html";
+      });
+
+      renderLanguage(initialLang);
+    </script>
+  </body>
+</html>
