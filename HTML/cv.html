@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Cis van Aken | CV</title>
+    <link rel="stylesheet" href="../assets/css/cv.css" />
+  </head>
+  <body data-language="en" data-page="cv" data-react-root="cv-page">
+    <nav class="top-bar">
+      <div class="top-bar-inner">
+        <span class="brand-name">Cis van Aken</span>
+        <div class="toolbar" aria-label="CV actions">
+          <button class="chip" id="back-home" type="button">
+            Back to main
+          </button>
+          <button class="chip active" type="button" data-language-toggle="en">
+            English
+          </button>
+          <button class="chip" type="button" data-language-toggle="nl">
+            Nederlands
+          </button>
+          <button class="chip accent" id="export-pdf" type="button">
+            Export PDF
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <div class="app-shell" data-component="cv-shell">
+      <header class="hero-card main-header" data-component="cv-hero">
+        <div class="hero-photo">
+          <div class="photo-ring" aria-label="Portrait placeholder">
+            <span id="photo-label">FOTO</span>
+          </div>
+        </div>
+        <div class="hero-text">
+          <h1 id="name-title"></h1>
+          <p id="tagline" class="tagline"></p>
+          <div class="hero-details" id="sidebar-contact"></div>
+        </div>
+      </header>
+
+      <div class="content-grid">
+        <div class="main-column" data-component="cv-main-column">
+          <section
+            class="card main-section"
+            id="profile-section"
+            data-component="cv-profile"
+          ></section>
+          <section
+            class="card main-section"
+            id="work-section"
+            data-component="cv-work"
+          ></section>
+          <section
+            class="card main-section"
+            id="projects-section"
+            data-component="cv-projects"
+          ></section>
+          <section
+            class="card main-section"
+            id="papers-section"
+            data-component="cv-papers"
+          ></section>
+        </div>
+
+        <aside class="card sidebar-card" data-component="cv-sidebar">
+          <section class="side-block" id="sidebar-education"></section>
+          <section class="side-block" id="sidebar-skills"></section>
+          <section class="side-block" id="sidebar-languages"></section>
+          <section class="side-block" id="sidebar-other"></section>
+          <section class="side-block" id="sidebar-board"></section>
+        </aside>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js"></script>
+    <script src="../assets/js/cv-data.js"></script>
+    <script src="../assets/js/cv-app.js"></script>
+    <script src="../assets/js/react-boundaries.js"></script>
+  </body>
+</html>
