@@ -8,8 +8,8 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Base path for GitHub Pages (optional, if deploying to a subdirectory)
-  // basePath: '/portfolio-1',
+  // Base path for GitHub Pages (repo is deployed at /portfolio)
+  basePath: "/portfolio",
 
   // Disable API routes since this is static
   // Allow static generation with trailing slashes
