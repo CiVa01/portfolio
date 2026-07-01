@@ -1,7 +1,76 @@
-/* Global styles - Using compiled CSS from the original template */
-@import "../public/css/main.css";
+/* Global styles - Using canonical Sass source */
+@import "../styles/main.scss";
+@import url("/css/cv.css");
 
 /* Smooth scroll behavior for better UX */
 html {
   scroll-behavior: smooth;
+}
+
+:root {
+  --cvb-bg: #eff4f8;
+  --cvb-surface: #ffffff;
+  --cvb-accent: #2f90b0;
+  --cvb-accent-soft: #d7edf5;
+  --cvb-text: #1a2e42;
+  --cvb-muted: #5a7189;
+  --cvb-rule: #dbe4ec;
+  --cvb-radius: 14px;
+  --cvb-shadow-sm: 0 2px 8px rgba(25, 45, 65, 0.06);
+  --cvb-shadow-md: 0 8px 22px rgba(25, 45, 65, 0.12);
+}
+
+body.cv-bridge {
+  background: var(--cvb-bg);
+  color: var(--cvb-text);
+}
+
+body.cv-bridge #wrapper {
+  background: transparent;
+}
+
+body.cv-bridge .cvb-section {
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+body.cv-bridge .cvb-card {
+  background: var(--cvb-surface);
+  border: 1px solid var(--cvb-rule);
+  border-radius: var(--cvb-radius);
+  box-shadow: var(--cvb-shadow-sm);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+body.cv-bridge .cvb-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--cvb-shadow-md);
+}
+
+body.cv-bridge .banner .content.cvb-card,
+body.cv-bridge .spotlight .content.cvb-card {
+  padding: 2rem;
+}
+
+body.cv-bridge .spotlight.style4 .content.cvb-card {
+  background-color: var(--cvb-surface) !important;
+  opacity: 1;
+}
+
+body.cv-bridge .spotlight .image img,
+body.cv-bridge .banner .image img {
+  border-radius: var(--cvb-radius);
+  box-shadow: var(--cvb-shadow-sm);
+}
+
+body.cv-bridge .button {
+  border-radius: 999px;
+  border-color: var(--cvb-rule);
+}
+
+body.cv-bridge .button:hover {
+  border-color: var(--cvb-accent);
+  color: var(--cvb-accent) !important;
 }

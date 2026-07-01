@@ -27,32 +27,34 @@ export default function Gallery({ items = [] }) {
   return (
     <>
       <div className="gallery style2 medium lightbox onscroll-fade-in">
-        {items.map((item, index) => (
-          <article key={index}>
-            <a
-              href={item.fullImage}
-              className="image"
-              onClick={(e) => {
-                e.preventDefault();
-                openLightbox(index);
-              }}
-            >
-              <img
-                src={item.thumbnail || item.fullImage}
-                alt={item.title || `Gallery item ${index + 1}`}
-              />
-            </a>
-            <div className="caption">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
-              <ul className="actions fixed">
-                <li>
-                  <span className="button small">Details</span>
-                </li>
-              </ul>
-            </div>
-          </article>
-        ))}
+        <div className="inner">
+          {items.map((item, index) => (
+            <article key={index}>
+              <a
+                href={item.fullImage}
+                className="image"
+                onClick={(e) => {
+                  e.preventDefault();
+                  openLightbox(index);
+                }}
+              >
+                <img
+                  src={item.thumbnail || item.fullImage}
+                  alt={item.title || `Gallery item ${index + 1}`}
+                />
+              </a>
+              <div className="caption">
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+                <ul className="actions fixed">
+                  <li>
+                    <span className="button small">Details</span>
+                  </li>
+                </ul>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
 
       {lightboxOpen && items[currentImageIndex] && (

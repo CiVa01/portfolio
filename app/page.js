@@ -151,7 +151,7 @@ export default function Home() {
         </p>
         <ul className="actions stacked">
           <li>
-            <a href="/files/cv_en.pdf" className="button">
+            <a href="/cv" className="button">
               See My CV
             </a>
           </li>
@@ -170,18 +170,19 @@ export default function Home() {
       >
         <h2>Who am I?</h2>
         <p>
-          As a dedicated and enthusiastic Human-Computer Interaction master's
-          student with a degree in Artificial Intelligence. I currently live in
-          Nijmegen and next to my studies I work as a work student for HSO in
-          Veenendaal. I enjoy photography, and I am teaching myself
-          post-processing. Almost all images in this document are also taken by
-          me as a showcase.
+          As a dedicated and enthusiastic Human-Computer Interaction
+          master&apos;s student with a degree in Artificial Intelligence. I
+          currently live in Nijmegen and next to my studies I work as a work
+          student for HSO in Veenendaal. I enjoy photography, and I am teaching
+          myself post-processing. Almost all images in this document are also
+          taken by me as a showcase.
         </p>
         <p>
-          I am a people's person that has always found himself in leadership
-          positions in several different associations and committees that I have
-          joined. I work best as a guide and a connector between different
-          groups, that I can then support with my own skills and knowledge.
+          I am a people&apos;s person that has always found himself in
+          leadership positions in several different associations and committees
+          that I have joined. I work best as a guide and a connector between
+          different groups, that I can then support with my own skills and
+          knowledge.
         </p>
         <ul className="actions stacked">
           <li>

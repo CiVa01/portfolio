@@ -11,9 +11,9 @@ export default function Section({
   return (
     <section
       id={id}
-      className={`wrapper style${style} align-${align} ${animationClass} ${className}`}
+      className={`wrapper cvb-section style${style} align-${align} ${animationClass} ${className}`}
     >
-      <div className="inner">{children}</div>
+      <div className="inner cvb-card">{children}</div>
     </section>
   );
 }

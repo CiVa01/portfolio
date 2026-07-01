@@ -19,9 +19,9 @@ export default function Spotlight({
   return (
     <section
       id={id}
-      className={`spotlight style${style} orient-${orient} content-align-${contentAlign} image-position-${imagePosition} ${fullscreenClass} ${animationClass}`}
+      className={`spotlight cvb-section style${style} orient-${orient} content-align-${contentAlign} image-position-${imagePosition} ${fullscreenClass} ${animationClass}`}
     >
-      <div className="content">{children}</div>
+      <div className="content cvb-card">{children}</div>
       {showImage && imageSrc && (
         <div className="image">
           <img src={imageSrc} alt={imageAlt} />

@@ -37,9 +37,3 @@ yarn-error.log*
 *.swo
 *~
 
-# Old files (can remove after migration)
-# index.html
-# HTML/
-# assets/
-# images/ (duplicated in public)
-# files/ (duplicated in public)

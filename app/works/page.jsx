@@ -92,10 +92,10 @@ export default function WorksPage() {
         </header>
         <p>
           For one of my courses, we got assigned groups and paired with a real
-          life client. This client presented us with a problem: "People have no
-          clue what they are consenting to and do not have the amount of control
-          over their data they should have." An interesting problem with many
-          different angles to tackle it from.
+          life client. This client presented us with a problem: &quot;People
+          have no clue what they are consenting to and do not have the amount of
+          control over their data they should have.&quot; An interesting problem
+          with many different angles to tackle it from.
         </p>
         <p>
           It was important that we built a tool that actually informs people of
@@ -107,8 +107,8 @@ export default function WorksPage() {
         <p>
           We settled on designing an extension for your browser, that pops up
           and summarizes what is in cookie consent forms. In the form of a small
-          "lawyer" avatar, that you can ask questions to and interact with, to
-          deliver the information in an easily digestible manner. My
+          &quot;lawyer&quot; avatar, that you can ask questions to and interact
+          with, to deliver the information in an easily digestible manner. My
           contributions were mainly centered around the user research. I
           designed personas and build user stories around the interviews we held
           and suggested improvements to the prototype based on the feedback we

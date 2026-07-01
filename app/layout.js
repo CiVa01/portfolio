@@ -1,4 +1,4 @@
-import "./globals.css";
+import "./globals.scss";
 
 export const metadata = {
   title: "Cis van Aken - Portfolio",
@@ -16,7 +16,7 @@ export default function RootLayout({ children }) {
           content="width=device-width, initial-scale=1, user-scalable=no"
         />
       </head>
-      <body className="is-preload">{children}</body>
+      <body className="cv-bridge">{children}</body>
     </html>
   );
 }

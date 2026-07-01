@@ -1,9 +1,0 @@
-/* FontAwesome icons */
-@import url("/css/fontawesome-all.min.css");
-/* Main stylesheet */
-@import url("/css/main.css");
-
-/* Smooth scroll behavior */
-html {
-  scroll-behavior: smooth;
-}

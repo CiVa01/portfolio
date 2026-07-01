@@ -19,9 +19,9 @@ export default function Banner({
 
   return (
     <section
-      className={`banner style${style} orient-${orient} content-align-${contentAlign} image-position-${imagePosition} ${fullscreenClass} ${animationClass}`}
+      className={`banner cvb-section style${style} orient-${orient} content-align-${contentAlign} image-position-${imagePosition} ${fullscreenClass} ${animationClass}`}
     >
-      <div className="content">{children}</div>
+      <div className="content cvb-card">{children}</div>
       {showImage && imageSrc && (
         <div className="image">
           <img src={imageSrc} alt={imageAlt} />
