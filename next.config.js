@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
-const BASE_PATH = "/portfolio";
+const isProd = process.env.NODE_ENV === "production";
+const BASE_PATH = isProd ? "/portfolio" : "";
 
 const nextConfig = {
-  // Enable static export for GitHub Pages deployment
+  // Static export for GitHub Pages — does not affect the dev server
   output: "export",
 
   // Disable image optimization for static export
@@ -10,7 +11,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  // Base path for GitHub Pages (repo is deployed at /portfolio)
+  // Only apply /portfolio prefix in production; dev serves from localhost:3000/ normally
   basePath: BASE_PATH,
 
   // Expose basePath to client-side code for raw <img> / <a href> usage
@@ -18,7 +19,6 @@ const nextConfig = {
     NEXT_PUBLIC_BASE_PATH: BASE_PATH,
   },
 
-  // Disable API routes since this is static
   // GitHub Pages serves directories (about/index.html) more reliably than flat files (about.html)
   trailingSlash: true,
 };

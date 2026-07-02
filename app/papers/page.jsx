@@ -37,7 +37,7 @@ export default function PapersPage() {
       </Banner>
 
       <Spotlight
-        style="5"
+        style="4"
         orient="right"
         contentAlign="right"
         imagePosition="left"

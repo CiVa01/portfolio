@@ -123,7 +123,7 @@ export default function WorksPage() {
       {/* Data Visualization Project */}
       <Spotlight
         id="data-viz"
-        style="5"
+        style="3"
         orient="right"
         contentAlign="right"
         imagePosition="left"
