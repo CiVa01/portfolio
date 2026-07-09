@@ -27,7 +27,7 @@ export default function AboutPage() {
         <p>
           I am Cis van Aken, aiming to be a professional in AI and UX and this
           is my personal website. I am 24 years old, and currently in the final
-          year of my Masters in Human Computer Interaction.
+          year of my Masters in Human-Computer Interaction.
         </p>
       </Banner>
 
@@ -111,14 +111,14 @@ export default function AboutPage() {
           job, I was also floor manager during evenings and was responsible for
           closing the restaurant and handling cash. I was involved in the
           instructing and training of new personnel for the location in Lent,
-          from July 202.
+          from July 2022.
         </p>
         <h3>
           September 2020 - June 2022: Student Assistant at the AI department of
           Radboud University.
         </h3>
         <p>
-          I was both a teaching assistent for Academic Skills related courses,
+          I was both a teaching assistant for Academic Skills related courses,
           as well as a mentor for first year students through the academic year
           in this Dual Function. I acted as a trust contact person, all while
           guiding them in their first large scale group project and helping them
@@ -140,7 +140,7 @@ export default function AboutPage() {
           <h1>Other Experiences</h1>
         </header>
         <h3>
-          August 2023 - August 2024: Chairmain of Faculty Umbrella Association
+          August 2023 - August 2024: Chairman of Faculty Umbrella Association
           Olympus.
         </h3>
         <p>

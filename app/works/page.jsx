@@ -140,8 +140,8 @@ export default function WorksPage() {
           visualize within-country migration in the Netherlands, using data from
           the CBS. Being the most experienced programmer in the group, I took
           the lead in designing the visualization and implementing it in D3.js,
-          while also contributing to the research and ideation when help was
-          needed process.
+          while also contributing to research and ideation wherever the team
+          needed support.
         </p>
         <ul className="actions stacked">
           <li>

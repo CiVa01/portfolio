@@ -71,7 +71,7 @@ const skills = [
     iconClass: "icon solid style2 major fa-user",
     title: "User Research",
     description:
-      "Setting up different kinds of surveys, conducting intervies, guiding focus groups and leading brainstorming sessions. These are all among the skills I possess.",
+      "Setting up different kinds of surveys, conducting interviews, guiding focus groups and leading brainstorming sessions. These are all among the skills I possess.",
   },
   {
     iconClass: "icon solid style2 major fa-save",
@@ -89,7 +89,7 @@ const skills = [
     iconClass: "icon solid style2 major fa-chart-bar",
     title: "Data Visualisation",
     description:
-      "I posses extensive knowledge on the underlying principles of what makes an effective data visualisation, alongside the skills to implement these in Javascript (D3.js) and/or Python (mainly Seaborn, matplotlib).",
+      "I possess extensive knowledge on the underlying principles of what makes an effective data visualisation, alongside the skills to implement these in Javascript (D3.js) and/or Python (mainly Seaborn, matplotlib).",
   },
   {
     iconClass: "icon solid style2 major fa-cog",
@@ -110,7 +110,7 @@ const contacts = [
     iconClass: "icon style2 major fa-address-book",
     title: "Email",
     content:
-      "<p>Business: cjf.vanaken@gmail.com</p><p>Academic: c.j.f.vanaken@students.uu.com</p>",
+      "<p>Personal: cis.vanaken@outlook.com</p><p>Work: cis.vanaken@digitalbricks.ai</p>",
   },
   {
     iconClass: "icon brands style2 major fa-linkedin-in",
@@ -143,7 +143,7 @@ export default function Home() {
         <h1>Welcome to my site</h1>
         <p className="major">Cis van Aken.</p>
         <p className="medium">
-          Master of Science Student in Human Computer Science, department of
+          Master of Science Student in Human-Computer Interaction, department of
           Information Sciences, Utrecht University.
         </p>
         <p className="medium">
@@ -171,7 +171,7 @@ export default function Home() {
       >
         <h2>Who am I?</h2>
         <p>
-          As a dedicated and enthusiastic Human-Computer Interaction
+          I&apos;m a dedicated and enthusiastic Human-Computer Interaction
           master&apos;s student with a degree in Artificial Intelligence. I
           currently live in Nijmegen and next to my studies I work as a work
           student for HSO in Veenendaal. I enjoy photography, and I am teaching
@@ -290,7 +290,7 @@ export default function Home() {
             </li>
             <li>
               <a
-                href="mailto:cjf.vanaken@gmail.com"
+                href="mailto:cis.vanaken@outlook.com"
                 className="icon style2 fa-envelope"
               >
                 <span className="label">Email</span>

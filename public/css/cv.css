@@ -45,9 +45,6 @@ body {
 .top-bar-inner {
   max-width: 1200px;
   margin: 0 auto;
-.top-bar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 10px 24px;
   display: flex;
   align-items: center;
@@ -69,10 +66,7 @@ body {
   letter-spacing: 0.01em;
   color: var(--text-main);
 }
-  color: var(--text-main);
-}
 
-.photo-ring {
 .photo-ring {
   width: 160px;
   height: 160px;
@@ -83,7 +77,6 @@ body {
   overflow: hidden;
   flex-shrink: 0;
   background: rgba(255, 255, 255, 0.12);
-}
   transition:
     transform 200ms ease,
     box-shadow 200ms ease;
@@ -101,26 +94,16 @@ body {
   box-shadow: 0 6px 20px rgba(65, 178, 217, 0.3);
   border-color: rgba(255, 255, 255, 0.75);
 }
-  box-shadow: 0 6px 20px rgba(65, 178, 217, 0.3);
-  border-color: rgba(255, 255, 255, 0.75);
-}
 
-.toolbar {
-  display: flex;
 .toolbar {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
   align-items: center;
 }
-}
 
 .chip {
   border: 1px solid var(--rule);
-  background: var(--surface);
-  color: var(--text-main);
-  border-radius: 999px;
-.chip {
   background: var(--surface);
   color: var(--text-main);
   border-radius: 999px;
@@ -160,7 +143,6 @@ body {
   height: 32px;
   padding: 2px;
   gap: 0;
-  padding: 2px;
   border: 1px solid var(--rule);
   border-radius: 999px;
   background: #edf2f6;
@@ -271,8 +253,6 @@ body {
   font-size: 0.93rem;
 }
 
-.hero-details {
-  margin-top: 14px;
 .hero-details {
   margin-top: 14px;
   font-size: 0.82rem;
@@ -596,8 +576,6 @@ button:focus-visible,
 
 @media (max-width: 600px) {
   .top-bar-inner {
-@media (max-width: 600px) {
-  .top-bar-inner {
     padding: 8px 12px;
     flex-direction: column;
     align-items: flex-start;
@@ -612,8 +590,6 @@ button:focus-visible,
   .toolbar {
     width: 100%;
     justify-content: flex-end;
-  }
-}
   }
 
   .app-shell {

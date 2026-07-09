@@ -22,7 +22,7 @@ export const cvData = {
     header: {
       name: "CIS VAN AKEN",
       tagline:
-        "UX Designer & Researcher · BSc Artificial Intelligence · MSc Human Computer Interaction",
+        "UX Designer & Researcher · BSc Artificial Intelligence · MSc Human-Computer Interaction",
     },
     sidebar: {
       contact: [
@@ -37,7 +37,7 @@ export const cvData = {
         {
           period: "2024 - Present",
           institution: "Utrecht University",
-          detail: "MSc Human Computer Interaction",
+          detail: "MSc Human-Computer Interaction",
         },
         {
           period: "2019 - 2024",
@@ -163,7 +163,7 @@ export const cvData = {
     header: {
       name: "CIS VAN AKEN",
       tagline:
-        "UX Designer & Researcher · BSc Artificial Intelligence · MSc Human Computer Interaction",
+        "UX Designer & Researcher · BSc Artificial Intelligence · MSc Human-Computer Interaction",
     },
     sidebar: {
       contact: [
@@ -178,7 +178,7 @@ export const cvData = {
         {
           period: "2024 - Heden",
           institution: "Utrecht University",
-          detail: "MSc Human Computer Interaction",
+          detail: "MSc Human-Computer Interaction",
         },
         {
           period: "2019 - 2024",
