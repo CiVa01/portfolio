@@ -87,6 +87,15 @@ export default function AboutPage() {
         <header>
           <h1>Work Experience</h1>
         </header>
+        <h3>Current: UX Designer &amp; Researcher at Digitalbricks.</h3>
+        <p>
+          At Digitalbricks I work as a UX designer and researcher, running user
+          research and usability testing to steer product development and working
+          closely with AI specialists to turn user insights into concrete product
+          decisions. I am currently leading a large UX project from research
+          through to design.
+          {/* TODO: Cis — add specifics: your start date, the product/client (anonymise anything NDA-sensitive), your exact remit, and one concrete result once it is shareable. */}
+        </p>
         <h3>
           December 2024 - Now: Working Student Managed Services and Support at
           HSO, Veenendaal.

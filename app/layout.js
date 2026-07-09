@@ -1,9 +1,9 @@
 import "./globals.scss";
 
 export const metadata = {
-  title: "Cis van Aken - Portfolio",
+  title: "Cis van Aken - UX Designer & Researcher",
   description:
-    "Master of Science in Human-Computer Interaction, B.Sc. in Artificial Intelligence",
+    "UX Designer & Researcher who designs human-centred products for AI systems. MSc Human-Computer Interaction, BSc Artificial Intelligence.",
 };
 
 export default function RootLayout({ children }) {

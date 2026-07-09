@@ -57,6 +57,11 @@ export default function PapersPage() {
           topic for a bachelor thesis. It taught me how to navigate ambiguity
           and adapt research plans under uncertainty.
         </p>
+        <p>
+          Despite the moving target, the final thesis earned an 8 and took on a
+          question that had not previously been assigned at bachelor level.
+          {/* TODO: Cis — add the actual conclusion: what did you find about the energy efficiency and scalability of neuromorphic algorithms versus traditional methods? */}
+        </p>
         <ul className="actions stacked">
           <li>
             <a
@@ -89,6 +94,12 @@ export default function PapersPage() {
           My main contributions were architecture design and implementation in
           PyTorch, based on prior neural network experience.
         </p>
+        <p>
+          The hybrid model learned to classify the MEG signals across tasks,
+          showing that combining LSTM and CNN units captures both the temporal
+          and spatial structure of the data better than either alone.
+          {/* TODO: Cis — add the concrete result: the classification accuracy/F1, how it compared to a baseline, and the grade if it was notable. */}
+        </p>
         <ul className="actions stacked">
           <li>
             <a
@@ -120,6 +131,12 @@ export default function PapersPage() {
         <p>
           This was a collaborative effort where I contributed research, writing,
           and framework development for the ethical analysis.
+        </p>
+        <p>
+          We landed on a shared-responsibility position, weighing platform
+          accountability against user autonomy, and it left me with a framework I
+          still lean on when thinking through the ethics of AI-driven products.
+          {/* TODO: Cis — refine to match your actual conclusion if I've mischaracterised the paper's stance. */}
         </p>
         <ul className="actions stacked">
           <li>

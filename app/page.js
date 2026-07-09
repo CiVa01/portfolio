@@ -71,37 +71,37 @@ const skills = [
     iconClass: "icon solid style2 major fa-user",
     title: "User Research",
     description:
-      "Setting up different kinds of surveys, conducting interviews, guiding focus groups and leading brainstorming sessions. These are all among the skills I possess.",
+      "Setting up surveys, conducting interviews, guiding focus groups and leading brainstorming sessions, turning what people say and do into clear, defensible design direction.",
   },
   {
-    iconClass: "icon solid style2 major fa-save",
-    title: "Programming",
+    iconClass: "icon solid style2 major fa-pencil-ruler",
+    title: "Prototyping",
     description:
-      "Extensive programming experience in languages like Java and Python, with moderate experience in Scala.\nI have experience in both imperative programming, as well as functional programming.",
+      "From low-fidelity Figma and Miro sketches to testable interactive prototypes, I move ideas into something users can react to quickly, then iterate on what the feedback tells me.",
   },
   {
-    iconClass: "icon solid style2 major fa-database",
-    title: "Data Mining",
+    iconClass: "icon solid style2 major fa-object-group",
+    title: "Interaction & UI Design",
     description:
-      "Experience in traditional data mining methods, as well as engineering methods, using SQL, Hadoop and Apache Spark.",
+      "Designing flows, screens and interaction patterns grounded in human-centred design principles: clear, usable interfaces that hold up under real user testing.",
+  },
+  {
+    iconClass: "icon solid style2 major fa-brain",
+    title: "Designing for AI",
+    description:
+      "A working understanding of machine learning architectures, their strengths, weaknesses and how they behave, so I can design honest, explainable experiences on top of AI rather than around it.",
   },
   {
     iconClass: "icon solid style2 major fa-chart-bar",
     title: "Data Visualisation",
     description:
-      "I possess extensive knowledge on the underlying principles of what makes an effective data visualisation, alongside the skills to implement these in Javascript (D3.js) and/or Python (mainly Seaborn, matplotlib).",
+      "A strong grasp of what makes a visualisation genuinely effective, plus the ability to build it myself in JavaScript (D3.js) or Python (Seaborn, matplotlib).",
   },
   {
-    iconClass: "icon solid style2 major fa-cog",
-    title: "Prototyping",
+    iconClass: "icon solid style2 major fa-save",
+    title: "Programming",
     description:
-      "From Figma and Miro, to more overarching principles of user research, I offer these capabilities",
-  },
-  {
-    iconClass: "icon solid style2 major fa-brain",
-    title: "Machine Learning Methods",
-    description:
-      "Extensive knowledge of the application of different machine learning architectures, their strengths, weaknesses and how to combine them.",
+      "Hands-on experience in Java, Python and Scala. Not my headline, but it means I can prototype real behaviour, talk to developers as a peer and design within what is actually buildable.",
   },
 ];
 
@@ -140,15 +140,16 @@ export default function Home() {
         imageSrc="/images/gallery/myself/foto_zelf_2.jpg"
         imageAlt="Cis van Aken"
       >
-        <h1>Welcome to my site</h1>
+        <h1>UX Designer &amp; Researcher</h1>
         <p className="major">Cis van Aken.</p>
         <p className="medium">
-          Master of Science Student in Human-Computer Interaction, department of
-          Information Sciences, Utrecht University.
+          I design human-centred products for AI systems, pairing user research
+          and interaction design with a real understanding of the technology
+          underneath.
         </p>
         <p className="medium">
-          B.Sc. in Artificial Intelligence Obtained at Radboud University
-          Nijmegen.
+          MSc Human-Computer Interaction, Utrecht University &middot; BSc
+          Artificial Intelligence, Radboud University Nijmegen.
         </p>
         <ul className="actions stacked">
           <li>
@@ -171,19 +172,23 @@ export default function Home() {
       >
         <h2>Who am I?</h2>
         <p>
-          I&apos;m a dedicated and enthusiastic Human-Computer Interaction
-          master&apos;s student with a degree in Artificial Intelligence. I
-          currently live in Nijmegen and next to my studies I work as a work
-          student for HSO in Veenendaal. I enjoy photography, and I am teaching
-          myself post-processing. Almost all images in this document are also
-          taken by me as a showcase.
+          I&apos;m a UX designer and researcher at Digitalbricks, where I turn
+          user research into design decisions for AI-driven products. With an
+          MSc in Human-Computer Interaction and a BSc in Artificial Intelligence
+          behind me, I can design for AI systems and still speak the language of
+          the engineers building them.
         </p>
         <p>
-          I am a people&apos;s person that has always found himself in
-          leadership positions in several different associations and committees
-          that I have joined. I work best as a guide and a connector between
-          different groups, that I can then support with my own skills and
-          knowledge.
+          Alongside my design work I&apos;m completing my Master&apos;s in
+          Utrecht and support a large enterprise client at HSO. I&apos;m a
+          people&apos;s person who has always found himself in leadership
+          positions across the associations and committees I&apos;ve joined; I
+          work best as a guide and a connector between groups, supporting them
+          with my own skills and knowledge.
+        </p>
+        <p>
+          Outside of work I enjoy photography and am teaching myself
+          post-processing; almost every image on this site was taken by me.
         </p>
         <ul className="actions stacked">
           <li>
@@ -270,8 +275,10 @@ export default function Home() {
       <Section style="1" align="center">
         <h2>Skill set</h2>
         <p>
-          Below is a listing of relevant skills I have acquired over the years,
-          both through my studies and personal interest.
+          I lead with user research and design, backed by a technical foundation
+          most designers don&apos;t have. I genuinely understand AI,
+          explainability and human-AI decision-making, so I can design for
+          intelligent systems and speak to the engineers building them.
         </p>
         <SkillsGrid skills={skills} />
       </Section>

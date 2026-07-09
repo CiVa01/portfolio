@@ -7,7 +7,7 @@ import { imgPath } from "../utils/imgPath";
 export const metadata = {
   title: "My Works - Cis van Aken",
   description:
-    "View my projects including Magic Wand, LawyAir, and Data Visualization work",
+    "Professional UX work and study projects by Cis van Aken, including a build-vs-integrate recommendation, Magic Wand, LawyAir and data visualisation.",
 };
 
 export default function WorksPage() {
@@ -26,12 +26,56 @@ export default function WorksPage() {
           <h1>In this section</h1>
         </header>
         <p>
-          Here you can find some of the projects I worked on during my studies.
-          These projects range from more technical assignments, to user research
-          and design based projects. I tried to pick a varied selection of
-          works, to showcase my broad skill set.
+          Here you can find a selection of my work, from professional UX projects
+          to projects from my studies. They range from user research and design
+          through to more technical assignments, chosen to show the breadth of
+          what I do.
         </p>
       </Banner>
+
+      {/* Robin — Professional case study (Digitalbricks) */}
+      <Spotlight
+        id="robin"
+        style="4"
+        orient="right"
+        contentAlign="right"
+        imagePosition="left"
+        imageSrc="/images/gallery/fulls/toren.jpg"
+        imageAlt="Robin build-vs-integrate recommendation"
+        isFullscreen
+      >
+        {/* TODO: Cis — replace imageSrc above with a real Robin artifact (decision matrix, research summary, or an anonymised screenshot). Currently a placeholder photo. */}
+        <header>
+          <h2>Robin: a build-vs-integrate recommendation</h2>
+          <p>
+            <em>Professional UX research &middot; Digitalbricks</em>
+          </p>
+        </header>
+        <p>
+          <strong>The problem.</strong> Digitalbricks needed to decide whether to
+          build Robin in-house or integrate an existing solution, and wanted that
+          call grounded in more than gut feel.
+          {/* TODO: Cis — one or two sentences on what Robin actually is and the real question you were asked to answer. Anonymise anything NDA-sensitive. */}
+        </p>
+        <p>
+          <strong>Constraints.</strong>
+          {/* TODO: Cis — the constraints that shaped the decision: timeline, budget, team capacity, existing tech stack, client requirements. */}
+        </p>
+        <p>
+          <strong>What I did.</strong> I led the research behind the
+          recommendation, weighing the build and integrate options against user
+          needs and business reality.
+          {/* TODO: Cis — your actual role and method: what research you ran, who you spoke to, what options you compared and how you evaluated them. */}
+        </p>
+        <p>
+          <strong>Decisions &amp; tradeoffs.</strong>
+          {/* TODO: Cis — the key tradeoffs you surfaced (e.g. speed vs. control, cost vs. fit, maintenance burden) and how you weighed them. */}
+        </p>
+        <p>
+          <strong>Outcome.</strong>
+          {/* TODO: Cis — what you recommended, whether it was adopted, and any result you can share. No invented metrics. */}
+        </p>
+      </Spotlight>
 
       {/* Magic Wand Project */}
       <Spotlight
@@ -63,8 +107,10 @@ export default function WorksPage() {
           different settings.
         </p>
         <p>
-          I learned a lot about user testing, prototyping and product design and
-          ultimately I am quite proud of the project.
+          The result was a working prototype that reliably turned devices on and
+          off and cycled through settings by gesture alone, and the user testing
+          we ran along the way is what decided which gestures made the final cut.
+          {/* TODO: Cis — replace/extend with the concrete outcome if you have one: how the prototype landed in the final course demo, the grade, or a specific testing insight that changed the design. */}
         </p>
         <ul className="actions stacked">
           <li>
@@ -118,6 +164,12 @@ export default function WorksPage() {
           and suggested improvements to the prototype based on the feedback we
           received.
         </p>
+        <p>
+          The research gave the team an evidence-based direction to design
+          against, and handed the client a concrete prototype to react to rather
+          than an abstract pitch.
+          {/* TODO: Cis — add the real outcome: how the client responded, whether the concept was taken further, or what usability testing revealed. */}
+        </p>
       </Spotlight>
 
       {/* Data Visualization Project */}
@@ -142,6 +194,12 @@ export default function WorksPage() {
           the lead in designing the visualization and implementing it in D3.js,
           while also contributing to research and ideation wherever the team
           needed support.
+        </p>
+        <p>
+          The finished dashboard let users explore migration flows between Dutch
+          municipalities interactively, surfacing regional patterns that a static
+          chart would have flattened out.
+          {/* TODO: Cis — add the concrete outcome: the grade, how it was received, or a specific insight the visualization revealed. */}
         </p>
         <ul className="actions stacked">
           <li>
